@@ -1,6 +1,6 @@
 {
   "name": "computed-style-to-inline-style",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Convert a HTML element's computed CSS to inline CSS.",
   "author": "Swinburne Software Innovation Lab",
   "license": "MIT",
