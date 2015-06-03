@@ -3,6 +3,10 @@ function computedToInline(element, recursive) {
     throw new Error("Element not specified.");
   }
 
+  if (!(element instanceof HTMLElement)) {
+    throw new Error("Specified element is not a valid HTMLElement instance.");
+  }
+
   if (recursive) {
     [].forEach.call(element.children, function(child) {
       computedToInline(child, recursive);
