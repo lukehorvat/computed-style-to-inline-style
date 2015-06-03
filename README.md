@@ -14,7 +14,7 @@ $ npm install computed-style-to-inline-style
 
 ## Usage
 
-The package exports a function that accepts a HTML element as an argument. When called, it will iterate through every computed style property of the specified element and redefine it as an inline style. An optional boolean argument can be specified to determine whether the function recursively processes child elements as well (defaults to `false`).
+The package exposes a function that accepts a HTML element as an argument. When called, it will iterate through every computed style property of the specified element and redefine it as an inline style. An optional boolean argument can be specified to determine whether the function recursively processes child elements as well (defaults to `false`).
 
 Example:
 
@@ -39,7 +39,7 @@ You then add a link to let users download the SVG as a file:
 
 To your dismay, you find that none of the SVG's pretty styling is preserved when downloaded to disk! This is because the file lacks the original context in which the SVG element was rendered in the browser and has no reference to those nice external stylesheets you wrote.
 
-As a solution, you use this package to redefine the SVG's styles inline, guaranteeing that the element is saved to file with all of its fancy styling information embedded within:
+As a solution, you use this package to redefine the SVG styling inline, guaranteeing that the element is saved to file with all of its fancy CSS information embedded within:
 
 ```javascript
 var computedToInline = require("computed-style-to-inline-style");

@@ -1,4 +1,8 @@
 function computedToInline(element, recursive) {
+  if (!element) {
+    throw new Error("Element not specified.");
+  }
+
   if (recursive) {
     [].forEach.call(element.children, function(child) {
       computedToInline(child, recursive);
