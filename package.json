@@ -19,9 +19,11 @@
     "css",
     "style",
     "stylesheet",
+    "computed",
+    "inline",
     "element",
     "html",
-    "computed",
-    "inline"
+    "browser",
+    "dom"
   ]
 }
