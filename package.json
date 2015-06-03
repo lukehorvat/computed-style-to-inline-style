@@ -1,0 +1,27 @@
+{
+  "name": "computed-style-to-inline-style",
+  "version": "0.0.0",
+  "description": "Convert a HTML element's computed CSS to inline CSS.",
+  "author": "Swinburne Software Innovation Lab",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssilab/computed-style-to-inline-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ssilab/computed-style-to-inline-style/issues"
+  },
+  "main": "./index.js",
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "css",
+    "style",
+    "stylesheet",
+    "element",
+    "html",
+    "computed",
+    "inline"
+  ]
+}
