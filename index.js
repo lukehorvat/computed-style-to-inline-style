@@ -1,7 +1,9 @@
-function computedToInline(element) {
-  [].forEach.call(element.children, function(child) {
-    computedToInline(child);
-  });
+function computedToInline(element, recursive) {
+  if (recursive) {
+    [].forEach.call(element.children, function(child) {
+      computedToInline(child, recursive);
+    });
+  }
 
   var computedStyle = getComputedStyle(element, null);
   for (var i = 0; i < computedStyle.length; i++) {
@@ -9,6 +11,6 @@ function computedToInline(element) {
     var value = computedStyle.getPropertyValue(property);
     element.style[property] = value;
   }
-};
+}
 
 module.exports = computedToInline;
