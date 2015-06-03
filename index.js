@@ -1,10 +1,10 @@
 function computedToInline(element, recursive) {
   if (!element) {
-    throw new Error("Element not specified.");
+    throw new Error("No element specified.");
   }
 
-  if (!(element instanceof HTMLElement)) {
-    throw new Error("Specified element is not a valid HTMLElement instance.");
+  if (!(element instanceof Element)) {
+    throw new Error("Specified element is not an instance of Element.");
   }
 
   if (recursive) {

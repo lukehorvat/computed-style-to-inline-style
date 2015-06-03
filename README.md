@@ -14,7 +14,7 @@ $ npm install computed-style-to-inline-style
 
 ## Usage
 
-The package exposes a function that accepts a HTML element as an argument. When called, it will iterate through every computed style property of the specified element and redefine it as an inline style. An optional boolean argument can be specified to determine whether the function recursively processes child elements as well (defaults to `false`).
+The package exposes a function that accepts a HTML element as an argument. When called, it will iterate through every computed style property of the specified element and redefine it as an inline style. An optional boolean argument can be provided to determine whether the function recursively processes child elements as well (defaults to `false`).
 
 Example:
 
