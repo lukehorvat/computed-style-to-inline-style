@@ -1,3 +1,5 @@
+"use strict";
+
 function computedToInline(element, recursive) {
   if (!element) {
     throw new Error("No element specified.");
