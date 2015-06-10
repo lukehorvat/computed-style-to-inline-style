@@ -10,7 +10,7 @@ function computedToInline(element, recursive) {
   }
 
   if (recursive) {
-    [].forEach.call(element.children, function(child) {
+    Array.prototype.forEach.call(element.children, function(child) {
       computedToInline(child, recursive);
     });
   }
