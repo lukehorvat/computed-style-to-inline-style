@@ -12,7 +12,9 @@
     "url": "https://github.com/ssilab/computed-style-to-inline-style/issues"
   },
   "main": "./index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "phantomjs test.js"
+  },
   "dependencies": {},
   "devDependencies": {},
   "keywords": [
