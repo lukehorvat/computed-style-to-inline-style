@@ -16,7 +16,9 @@
     "test": "phantomjs test.js"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "phantomjs": "1.9.18"
+  },
   "keywords": [
     "css",
     "style",

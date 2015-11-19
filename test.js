@@ -16,4 +16,5 @@ page.evaluate(function() {
   }
 });
 
+console.log("Done!");
 phantom.exit();
