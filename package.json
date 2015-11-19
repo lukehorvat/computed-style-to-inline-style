@@ -13,10 +13,13 @@
   },
   "main": "./index.js",
   "scripts": {
+    "precommit": "npm test",
+    "prepush": "npm test",
     "test": "phantomjs test.js"
   },
   "dependencies": {},
   "devDependencies": {
+    "husky": "0.10.2",
     "phantomjs": "1.9.18"
   },
   "keywords": [
