@@ -1,2 +1,2 @@
-*.log
+npm-debug.log
 node_modules/
