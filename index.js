@@ -22,7 +22,7 @@
       });
     }
 
-    var computedStyle = getComputedStyle(element, null);
+    var computedStyle = getComputedStyle(element);
     for (var i = 0; i < computedStyle.length; i++) {
       var property = computedStyle.item(i);
       var value = computedStyle.getPropertyValue(property);
