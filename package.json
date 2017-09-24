@@ -4,14 +4,8 @@
   "description": "Convert a HTML element's computed CSS to inline CSS.",
   "author": "Luke Horvat",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lukehorvat/computed-style-to-inline-style.git"
-  },
-  "bugs": {
-    "url": "https://github.com/lukehorvat/computed-style-to-inline-style/issues"
-  },
-  "main": "./index.js",
+  "repository": "lukehorvat/computed-style-to-inline-style",
+  "main": "index.js",
   "scripts": {
     "precommit": "npm test",
     "prepush": "npm test",
