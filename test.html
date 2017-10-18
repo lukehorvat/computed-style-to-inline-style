@@ -24,7 +24,7 @@
     </style>
   </head>
   <body>
-    <h1 style="color: #aaa">Hello, World!</h1>
+    <h1 style="color: #aaa">Hello, <span>World!</span></h1>
     <button type="button">Test</button>
 
     <script>
@@ -35,7 +35,10 @@
       remote.webContents.getFocusedWebContents().openDevTools();
 
       document.querySelector("button").addEventListener("click", () => {
-        computedStyleToInlineStyle(document.querySelector("h1"));
+        computedStyleToInlineStyle(document.querySelector("h1"), {
+          recursive: true,
+          properties: ["font-size", "text-decoration"]
+        });
       }, false);
 
       document.title = `${pkg.name} (v${pkg.version})`;

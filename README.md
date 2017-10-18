@@ -14,14 +14,33 @@ $ npm install computed-style-to-inline-style
 
 ## Usage
 
-The package exposes a function that accepts a HTML element as an argument. When called, it will iterate through every computed style property of the specified element and redefine it as an inline style. An optional boolean argument can be provided to determine whether the function recursively processes child elements as well (defaults to `false`).
-
 Example:
 
 ```javascript
 var computedToInline = require("computed-style-to-inline-style");
-computedToInline(document.body, true);
+
+computedToInline(document.body, {
+  recursive: true,
+  properties: ["font-size", "text-decoration"]
+});
 ```
+
+## API
+
+### computedToInline(element, [options])
+
+A function that iterates through the computed style properties of `element` and redefines them as inline styles.
+
+#### element
+
+An HTML element.
+
+#### options
+
+An (optional) object with any of the following keys defined:
+
+- `recursive` – A boolean indicating whether to recursively process child elements or not. Defaults to `false`.
+- `properties` – An array of property names to operate on; all others are filtered out. Defaults to `undefined` (i.e. *every* computed style property is redefined as an inline style).
 
 ## Why?
 
@@ -43,6 +62,6 @@ As a solution, you use this package to redefine the SVG styling inline, guarante
 
 ```javascript
 var computedToInline = require("computed-style-to-inline-style");
-var svg = getSvgElement();
-computedToInline(svg, true);
+
+computedToInline(svgElement, { recursive: true });
 ```
