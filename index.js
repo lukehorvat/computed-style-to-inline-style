@@ -12,10 +12,6 @@
       throw new Error("No element specified.");
     }
 
-    if (!(element instanceof Element)) {
-      throw new Error("Specified element is not an instance of Element.");
-    }
-
     if (recursive) {
       Array.prototype.forEach.call(element.children, function(child) {
         computedStyleToInlineStyle(child, recursive);
