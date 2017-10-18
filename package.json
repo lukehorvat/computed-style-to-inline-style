@@ -7,14 +7,11 @@
   "repository": "lukehorvat/computed-style-to-inline-style",
   "main": "index.js",
   "scripts": {
-    "precommit": "npm test",
-    "prepush": "npm test",
-    "test": "phantomjs test.js"
+    "test": "node_modules/.bin/electron test.html"
   },
   "dependencies": {},
   "devDependencies": {
-    "husky": "0.10.2",
-    "phantomjs": "1.9.18"
+    "electron": "1.7.9"
   },
   "keywords": [
     "css",
