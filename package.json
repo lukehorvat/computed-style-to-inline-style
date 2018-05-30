@@ -7,11 +7,20 @@
   "repository": "lukehorvat/computed-style-to-inline-style",
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/electron test.html"
+    "build:test": "webpack ./test.js --o ./dist/test.js --mode=development",
+    "build:dev": "webpack --mode=development",
+    "pretest": "webpack ./test.js --o ./dist/test.js --mode=development",
+    "test": "mocha dist/test.js",
+    "build": "webpack"
   },
   "dependencies": {},
   "devDependencies": {
-    "electron": "1.7.9"
+    "chai": "^4.1.2",
+    "electron": "1.7.9",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.4"
   },
   "keywords": [
     "css",
