@@ -18,6 +18,7 @@
     "chai": "^4.1.2",
     "electron": "1.7.9",
     "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
     "mocha": "^5.2.0",
     "webpack": "^4.10.2",
     "webpack-cli": "^2.1.4"
