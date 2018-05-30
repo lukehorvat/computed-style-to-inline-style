@@ -5,16 +5,23 @@
   "author": "Luke Horvat",
   "license": "MIT",
   "repository": "lukehorvat/computed-style-to-inline-style",
-  "main": "index.js",
+  "main": "dist/main.js",
+  "module": "src/index.js",
+  "engines": {
+    "node": ">=8"
+  },
   "scripts": {
     "build:test": "webpack ./test.js --o ./dist/test.js --mode=development",
     "build:dev": "webpack --mode=development",
     "pretest": "webpack ./test.js --o ./dist/test.js --mode=development",
     "test": "mocha dist/test.js",
-    "build": "webpack"
+    "build": "webpack --module-bind js=babel-loader --mode=production"
   },
   "dependencies": {},
   "devDependencies": {
+    "@babel/core": "^7.0.0-beta.49",
+    "@babel/preset-env": "^7.0.0-beta.49",
+    "babel-loader": "^8.0.0-beta.3",
     "chai": "^4.1.2",
     "electron": "1.7.9",
     "eslint": "^4.19.1",
