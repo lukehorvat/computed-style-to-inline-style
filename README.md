@@ -17,7 +17,7 @@ $ npm install computed-style-to-inline-style
 Example:
 
 ```javascript
-var computedToInline = require("computed-style-to-inline-style");
+const computedToInline = require("computed-style-to-inline-style");
 
 computedToInline(document.body, {
   recursive: true,

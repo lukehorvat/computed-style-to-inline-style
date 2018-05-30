@@ -1,4 +1,3 @@
-/* global Map */
 import {
   getAllPropertyNames,
   computeStyle,
