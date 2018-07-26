@@ -17,9 +17,9 @@ $ npm install computed-style-to-inline-style
 Example:
 
 ```javascript
-var computedToInline = require("computed-style-to-inline-style");
+const computedStyleToInlineStyle = require("computed-style-to-inline-style");
 
-computedToInline(document.body, {
+computedStyleToInlineStyle(document.body, {
   recursive: true,
   properties: ["font-size", "text-decoration"]
 });
@@ -27,7 +27,7 @@ computedToInline(document.body, {
 
 ## API
 
-### computedToInline(element, [options])
+### computedStyleToInlineStyle(element, [options])
 
 A function that iterates through the computed style properties of `element` and redefines them as inline styles.
 
@@ -61,7 +61,7 @@ To your dismay, you find that none of the SVG's pretty styling is preserved when
 As a solution, you use this package to redefine the SVG styling inline, guaranteeing that the element is saved to file with all of its fancy CSS information embedded within:
 
 ```javascript
-var computedToInline = require("computed-style-to-inline-style");
+const computedStyleToInlineStyle = require("computed-style-to-inline-style");
 
-computedToInline(svgElement, { recursive: true });
+computedStyleToInlineStyle(svgElement, { recursive: true });
 ```
