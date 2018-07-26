@@ -7,6 +7,8 @@
     root.computedStyleToInlineStyle = factory(); // Browser.
   }
 }(this, function() {
+  var each = Array.prototype.forEach;
+
   return function computedStyleToInlineStyle(element, options) {
     if (!element) {
       throw new Error("No element specified.");
@@ -17,18 +19,14 @@
     }
 
     if (options.recursive) {
-      Array.prototype.forEach.call(element.children, function(child) {
+      each.call(element.children, function(child) {
         computedStyleToInlineStyle(child, options);
       });
     }
 
     var computedStyle = getComputedStyle(element);
-    for (var i = 0; i < computedStyle.length; i++) {
-      var property = computedStyle.item(i);
-      if (!options.properties || options.properties.indexOf(property) >= 0) {
-        var value = computedStyle.getPropertyValue(property);
-        element.style[property] = value;
-      }
-    }
+    each.call(options.properties || computedStyle, function(property) {
+      element.style[property] = computedStyle.getPropertyValue(property);
+    });
   };
 }));
