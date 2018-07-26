@@ -6,10 +6,16 @@ Uses [Window.getComputedStyle](https://developer.mozilla.org/en-US/docs/Web/API/
 
 ## Installation
 
-Install the package with NPM:
+Install the package via npm:
 
-```bash
+```sh
 $ npm install computed-style-to-inline-style
+```
+
+Or download it from the unpkg CDN:
+
+```html
+<script src="https://unpkg.com/computed-style-to-inline-style"></script>
 ```
 
 ## Usage
