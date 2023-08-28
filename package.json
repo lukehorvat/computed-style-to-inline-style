@@ -5,22 +5,22 @@
   "author": "Luke Horvat",
   "license": "MIT",
   "repository": "lukehorvat/computed-style-to-inline-style",
-  "main": "dist",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "node_modules/.bin/babel lib -d dist -q",
-    "prebuild": "node_modules/.bin/rimraf dist",
-    "prepublish": "npm run build",
-    "pretest": "npm run build",
-    "test": "node_modules/.bin/electron test/index.html"
+    "build": "tsc",
+    "prebuild": "rimraf dist",
+    "test": "electron test/index.html",
+    "pretest": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "6.26.0",
-    "babel-plugin-transform-es2015-modules-umd": "6.24.1",
-    "babel-plugin-transform-function-bind": "6.22.0",
-    "babel-preset-env": "1.7.0",
     "electron": "1.7.9",
-    "rimraf": "2.6.2"
+    "rimraf": "^4.1.2",
+    "typescript": "^5.1.6"
   },
   "keywords": [
     "css",
@@ -32,29 +32,5 @@
     "html",
     "browser",
     "dom"
-  ],
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "browsers": "ie >= 9"
-          }
-        }
-      ]
-    ],
-    "plugins": [
-      [
-        "transform-es2015-modules-umd",
-        {
-          "globals": {
-            "index": "computedStyleToInlineStyle"
-          },
-          "exactGlobals": true
-        }
-      ],
-      "transform-function-bind"
-    ]
-  }
+  ]
 }
