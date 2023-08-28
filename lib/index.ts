@@ -1,5 +1,9 @@
+/**
+ * A function that iterates through the computed style properties of a HTML
+ * element and redefines them as inline styles.
+ */
 export default function computedStyleToInlineStyle(
-  element: HTMLElement,
+  element: HTMLElement | SVGElement,
   options?: {
     recursive?: boolean;
     properties?: string[];
