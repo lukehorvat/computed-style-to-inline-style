@@ -1,4 +1,4 @@
-# computed-style-to-inline-style [![NPM version](http://img.shields.io/npm/v/computed-style-to-inline-style.svg?style=flat-square)](https://www.npmjs.org/package/computed-style-to-inline-style)
+# computed-style-to-inline-style [![npm version](https://img.shields.io/npm/v/computed-style-to-inline-style.svg?style=flat-square)](https://www.npmjs.org/package/computed-style-to-inline-style)
 
 Convert a HTML element's computed CSS to inline CSS.
 
