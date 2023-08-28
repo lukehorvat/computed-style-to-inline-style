@@ -22,12 +22,12 @@ Or download it from the unpkg CDN:
 
 Example:
 
-```javascript
-const computedStyleToInlineStyle = require("computed-style-to-inline-style");
+```js
+import computedStyleToInlineStyle from 'computed-style-to-inline-style';
 
 computedStyleToInlineStyle(document.body, {
   recursive: true,
-  properties: ["font-size", "text-decoration"]
+  properties: ['font-size', 'text-decoration'],
 });
 ```
 
@@ -46,7 +46,7 @@ An HTML element.
 An (optional) object with any of the following keys defined:
 
 - `recursive` – A boolean indicating whether to recursively process child elements or not. Defaults to `false`.
-- `properties` – An array of property names to operate on; all others are filtered out. Defaults to `undefined` (i.e. *every* computed style property is redefined as an inline style).
+- `properties` – An array of property names to operate on; all others are filtered out. Defaults to `undefined` (i.e. _every_ computed style property is redefined as an inline style).
 
 ## Why?
 
@@ -66,8 +66,6 @@ To your dismay, you find that none of the SVG's pretty styling is preserved when
 
 As a solution, you use this package to redefine the SVG styling inline, guaranteeing that the element is saved to file with all of its fancy CSS information embedded within:
 
-```javascript
-const computedStyleToInlineStyle = require("computed-style-to-inline-style");
-
+```js
 computedStyleToInlineStyle(svgElement, { recursive: true });
 ```
