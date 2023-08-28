@@ -31,6 +31,12 @@ computedStyleToInlineStyle(document.body, {
 });
 ```
 
+### As a bookmarklet
+
+```javascript
+javascript:(function(){s=document.createElement('script');s.type='text/javascript';s.src='https://unpkg.com/computed-style-to-inline-style';document.body.appendChild(s);computedStyleToInlineStyle(document.body,{recursive:true})})()
+```
+
 ## API
 
 ### computedStyleToInlineStyle(element, [options])
