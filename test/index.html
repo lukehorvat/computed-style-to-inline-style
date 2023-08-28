@@ -2,7 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="script-src 'unsafe-inline'; style-src 'unsafe-inline';"
+    />
     <style>
       html,
       body {
@@ -26,26 +29,17 @@
   <body>
     <h1 style="color: #aaa">Hello, <span>World!</span></h1>
     <button type="button">Test</button>
-
     <script>
-      const computedStyleToInlineStyle = require('../').default;
-      const pkg = require('../package.json');
-      const { remote } = require('electron');
-
-      remote.webContents.getFocusedWebContents().openDevTools();
-
       document.querySelector('button').addEventListener(
         'click',
         () => {
-          computedStyleToInlineStyle(document.querySelector('h1'), {
+          window.computedStyleToInlineStyle(document.querySelector('h1'), {
             recursive: true,
             properties: ['font-size', 'text-decoration'],
           });
         },
         false
       );
-
-      document.title = `${pkg.name} (v${pkg.version})`;
     </script>
   </body>
 </html>

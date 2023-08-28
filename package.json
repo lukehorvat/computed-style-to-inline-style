@@ -13,12 +13,12 @@
   "scripts": {
     "build": "tsc",
     "prebuild": "rimraf dist",
-    "test": "electron test/index.html",
+    "test": "electron test/main.js",
     "pretest": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
-    "electron": "1.7.9",
+    "electron": "^26.1.0",
     "rimraf": "^4.1.2",
     "typescript": "^5.1.6"
   },
