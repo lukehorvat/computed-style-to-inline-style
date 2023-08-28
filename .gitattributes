@@ -1,0 +1,2 @@
+# Don't let test files confuse GitHub's language stats.
+test/* linguist-vendored
