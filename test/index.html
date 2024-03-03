@@ -1,11 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="script-src 'unsafe-inline'; style-src 'unsafe-inline';"
-    />
+    <title>computed-style-to-inline-style</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <style>
       html,
       body {
@@ -26,20 +24,5 @@
       }
     </style>
   </head>
-  <body>
-    <h1 style="color: #aaa">Hello, <span>World!</span></h1>
-    <button type="button">Test</button>
-    <script>
-      document.querySelector('button').addEventListener(
-        'click',
-        () => {
-          window.computedStyleToInlineStyle(document.querySelector('h1'), {
-            recursive: true,
-            properties: ['font-size', 'text-decoration'],
-          });
-        },
-        false
-      );
-    </script>
-  </body>
+  <body></body>
 </html>

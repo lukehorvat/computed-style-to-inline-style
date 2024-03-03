@@ -9,7 +9,7 @@ Uses [Window.getComputedStyle](https://developer.mozilla.org/en-US/docs/Web/API/
 Install the package via npm:
 
 ```sh
-$ npm install computed-style-to-inline-style
+npm install computed-style-to-inline-style
 ```
 
 Or download it from the unpkg CDN:
