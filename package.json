@@ -12,7 +12,7 @@
   ],
   "scripts": {
     "build": "webpack --mode production",
-    "test": "webpack serve --mode development --config ./test/webpack.config.js"
+    "test": "webpack serve --mode development --config ./test/webpack.config.mjs"
   },
   "dependencies": {},
   "devDependencies": {

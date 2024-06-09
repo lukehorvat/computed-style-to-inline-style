@@ -1,11 +1,13 @@
-const path = require('path');
-const webpack = require('webpack');
+import path from 'node:path';
+import webpack from 'webpack';
+
+const { dirname } = import.meta;
 
 /** @type { webpack.Configuration } */
-module.exports = {
-  entry: path.join(__dirname, 'lib/index.ts'),
+export default {
+  entry: path.join(dirname, 'lib/index.ts'),
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(dirname, 'dist'),
     filename: 'index.js',
     library: {
       type: 'umd',

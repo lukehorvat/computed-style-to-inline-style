@@ -1,9 +1,11 @@
-const path = require('path');
-const webpack = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+import path from 'node:path';
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+
+const { dirname } = import.meta;
 
 /** @type { webpack.Configuration } */
-module.exports = {
+export default {
   devServer: {
     port: 9000,
     open: true,
@@ -12,7 +14,7 @@ module.exports = {
       logging: 'warn',
     },
   },
-  entry: path.join(__dirname, 'index.ts'),
+  entry: path.join(dirname, 'index.ts'),
   resolve: {
     extensions: ['.ts', '...'],
   },
@@ -30,7 +32,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'index.html'),
+      template: path.join(dirname, 'index.html'),
     }),
   ],
 };
